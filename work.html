@@ -11,6 +11,8 @@
         <script src="./js/jquery-3.7.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+        <script src="https://unpkg.com/lenis@1.2.0/dist/lenis.min.js"></script>
         <script src="./js/script.js"></script>
         <script src="./js/work.js"></script>
     </head>
@@ -40,31 +42,31 @@
                     <h1>WORK</h1>
                     <ul class="work-list">
                         <li>
-                            <a href="#">
+                            <a href="#card1">
                                 <em>01.</em>
                                 <strong>Protfolio Site</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#card2">
                                 <em>02.</em>
                                 <strong>Paulbassett</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#card3">
                                 <em>03.</em>
                                 <strong>Pizza Hut</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#card4">
                                 <em>04.</em>
                                 <strong>Inside OUt2 MicroSite</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#card5">
                                 <em>05.</em>
                                 <strong>잔소리ON</strong>
                             </a>
@@ -72,17 +74,19 @@
                     </ul>
                 </div>
 
+                <!-- <div class="img-box"><img src="./images/img-box/imgbox1.png" alt="" /></div> -->
+
                 <!-- //s: work-card -->
 
                 <div class="card-wrap">
                     <div class="card-grid grid1">
-                        <div class="card card1">
+                        <div class="card card1" id="card1">
                             <div class="image-container card-img1">
                                 <img src="./images/card1.png" alt="Protfolio Site" />
                                 <div class="overlay"></div>
                                 <div class="buttons">
                                     <a href="#process">Process Page</a>
-                                    <a href="#website">Web Site</a>
+                                    <!-- <a href="#website">Web Site</a> -->
                                 </div>
                             </div>
 
@@ -96,7 +100,7 @@
                     </div>
 
                     <div class="card-grid grid2">
-                        <div class="card card2">
+                        <div class="card card2" id="card2">
                             <div class="image-container card-img2">
                                 <img src="./images/card2.png" alt="Paulbassett" />
                                 <div class="overlay"></div>
@@ -116,7 +120,7 @@
                     </div>
 
                     <div class="card-grid grid3">
-                        <div class="card card3">
+                        <div class="card card3" id="card3">
                             <div class="image-container card-img3">
                                 <img src="./images/card3.png" alt="Pizza Hut" />
                                 <div class="overlay"></div>
@@ -136,7 +140,7 @@
                     </div>
 
                     <div class="card-grid grid4">
-                        <div class="card card4">
+                        <div class="card card4" id="card4">
                             <div class="image-container card-img4">
                                 <img src="./images/card4.png" alt="Inside Out2 MicroSite" />
                                 <div class="overlay"></div>
@@ -156,13 +160,13 @@
                     </div>
 
                     <div class="card-grid grid5">
-                        <div class="card card5">
+                        <div class="card card5" id="card5">
                             <div class="image-container card-img5">
                                 <img src="./images/card5.png" alt="잔소리ON" />
                                 <div class="overlay"></div>
                                 <div class="buttons">
                                     <a href="#process">Process Page</a>
-                                    <a href="#website">Web Site</a>
+                                    <!-- <a href="#website">Web Site</a> -->
                                 </div>
                             </div>
 
@@ -185,6 +189,7 @@
                 <span></span>
             </div>
         </div>
+        <a href="#" class="btn-top">TOP</a>
 
         <!-- 배경 효과 -->
         <div class="texture"></div>

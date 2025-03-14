@@ -22,6 +22,10 @@
     --kr-font: 'Pretendard', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font: 1rem 'Orbitron', 'Pretendard', sans-serif;
     color: #fff;

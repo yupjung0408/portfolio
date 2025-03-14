@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
+
     // declares variables for big circle and small circle in cursor
     const cursorBig = document.querySelector('.big');
     const cursorSmall = document.querySelector('.small');
