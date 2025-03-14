@@ -1,0 +1,179 @@
+@charset 'utf-8';
+/* common.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+/* OPTIONAL / defining page color variables */
+:root {
+    --black: #000000;
+    --grey1: #a3a3a3;
+    --grey2: #383838;
+    --white: #ffffff;
+    /* --green: #62ba9b; */
+    /* --green: #56f1ff; */
+    /* --green: #48d1cc; */
+    /* --green: #27e6ec; */
+    /* --green: #2ac9f9; */
+    --green: #fff;
+    --title-font: 'Orbitron', sans-serif;
+    --number-font: 'Electrolize', sans-serif;
+    --kr-font: 'Pretendard', sans-serif;
+}
+
+body {
+    font: 1rem 'Orbitron', 'Pretendard', sans-serif;
+    color: #fff;
+}
+
+/* REQUIRED / without this, the cursor will still show */
+* {
+    cursor: none;
+}
+
+/* OPTIONAL / prevents user from selecting texts */
+::selection {
+    user-select: none;
+}
+
+.click {
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    filter: drop-shadow(0 0 10px #fff);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* //s: header */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+header .inner {
+    margin: 0 auto;
+    padding: 0 80px;
+    height: 100%;
+}
+
+nav {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    height: 125px;
+}
+
+.gnb {
+    display: flex;
+    gap: 60px;
+}
+
+.gnb li {
+    position: relative; /* 밑줄 위치 조정 위해 필요 */
+    padding: 10px;
+}
+
+.gnb li a {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* 호버 시 밑줄 효과 */
+.gnb li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px; /* 밑줄 두께 */
+    background-color: #fff; /* 밑줄 색상 */
+    opacity: 0; /* 처음엔 안 보이게 */
+    transform-origin: left;
+    transition: 0.4s;
+}
+
+.gnb li:hover::after {
+    opacity: 1; /* 호버 시 밑줄 나타남 */
+    width: 100%;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* //e: header */
+
+/* 배경 효과 */
+
+.texture {
+    background: url(https://www.transparenttextures.com/patterns/graphy.png) repeat 0 0 / 5vw auto;
+    position: fixed;
+    inset: 0;
+
+    opacity: 50%;
+    z-index: -5;
+}
+
+/* 마우스 효과 */
+
+/* REQUIRED / besides position, pointer-events, transform, and transition, the rest are customizable styling */
+.small {
+    height: 10px;
+    width: 10px;
+    background-color: var(--green);
+    border-radius: 10px;
+    filter: drop-shadow(0 0 5px var(--green)) drop-shadow(0 0 20px var(--green));
+
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: height 0.2s, width 0.2s;
+    z-index: 99;
+}
+
+/* REQUIRED / besides position, pointer-events, transform, and transition, the rest are customizable styling */
+.big {
+    height: 50px;
+    width: 50px;
+    border: 3px solid var(--green);
+    border-radius: 100px;
+    filter: drop-shadow(0 0 5px var(--green)) drop-shadow(0 0 20px var(--green));
+
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: height 0.5s, width 0.5s, filter 0.5s;
+    z-index: 99;
+}
+
+/* REQUIRED / some styling is necessary for hover effect */
+.hover__big {
+    height: 100px;
+    width: 100px;
+    filter: drop-shadow(0 0 5px var(--green)) drop-shadow(0 0 20px var(--green)) drop-shadow(0 0 40px var(--green));
+
+    transition: height 0.5s, width 0.5s, filter 0.5s;
+}
+
+/* REQUIRED / some styling is necessary for hover effect */
+.hover__small {
+    height: 8px;
+    width: 8px;
+
+    transition: height 0.2s, width 0.2s;
+}
+
+/* //e: 마우스 효과 */
