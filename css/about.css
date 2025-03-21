@@ -1,0 +1,429 @@
+@charset 'utf-8';
+
+:root {
+    --main-bg: #363159;
+    --secondary-bg: #202026;
+    --main-fg: #eee;
+
+    --primary: #05c7f2;
+    --primary-dark: #05aff2;
+    --secondary: #d63bd9;
+    --secondary-dark: #7b6cd9;
+
+    --notchSize: 40px;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: var(--title-font);
+}
+
+main .inner {
+    padding: 125px 260px 0;
+}
+
+h1 {
+    /* font-size: 60px;
+    font-weight: bold; */
+}
+
+/* 글리치 효과 */
+
+.glitch-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.glitch {
+    position: relative;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 3px;
+    z-index: 1;
+}
+
+.glitch:before,
+.glitch:after {
+    display: block;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+.glitch.on:before {
+    animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    color: #00ffff;
+    z-index: -1;
+}
+
+.glitch.on:after {
+    animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+    color: #ff00ff;
+    z-index: -2;
+}
+
+@keyframes glitch-it {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+/* //e: 글리치 효과 */
+
+.tab {
+    width: 1400px;
+    height: 800px;
+    margin: 0 auto;
+    /* background: #ff5; */
+
+    /* position: relative; */
+}
+
+.tab-menu {
+    display: flex;
+    justify-content: right;
+}
+
+.tab-menu li {
+    border: 2px solid var(--primary);
+    box-shadow: inset 0 0 10px var(--primary), 0 0 20px var(--primary);
+    transition: 0.4s;
+}
+
+/* .tab-menu li + li {} */
+.tab-menu li:not(:first-child) {
+    margin-left: -1px;
+}
+
+.tab-menu li a {
+    /* border: 1px solid #f00; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 활성화 된 탭메뉴 */
+.tab-menu li.active {
+    background: var(--primary);
+    /* border-bottom: 1px solid transparent; */
+}
+
+.tab-item {
+    padding: 20px 120px 60px;
+    width: 1400px;
+    height: 650px;
+    background: rgba(5, 175, 242, 0.2);
+    /* box-shadow: inset 0 0 10px var(--primary), 0 0 20px var(--primary); */
+    border: 2px solid var(--primary-dark);
+    border-radius: 25px 0px 25px 25px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: clip-path 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.tab-item.initial {
+    opacity: 1;
+    visibility: visible;
+    animation: unfoldFromTop 0.8s ease-in-out forwards;
+}
+
+@keyframes unfoldFromTop {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        opacity: 0;
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 1;
+    }
+}
+
+.tab-item.active {
+    opacity: 1;
+    visibility: visible;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.tab-item.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.tab-contents {
+    position: relative;
+    height: 650px;
+}
+
+/* //e: 탭메뉴 */
+
+.tab-item h2 {
+    font-size: 40px;
+    font-weight: bold;
+    animation: text-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes text-glow {
+    from {
+        text-shadow: 0 0 1px var(--primary);
+    }
+    to {
+        text-shadow: 0 0 7px var(--primary);
+    }
+}
+
+.info-con {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 500px;
+    width: 1160px;
+}
+
+.img-bd {
+    background: repeating-linear-gradient(
+            -45deg,
+            rgba(5, 175, 242, 0.1),
+            rgba(5, 175, 242, 0.1) 2px,
+            rgba(5, 199, 242, 0.02) 2px,
+            rgba(5, 199, 242, 0.02) 10px
+        ),
+        linear-gradient(135deg, transparent, rgba(5, 199, 242, 0.2));
+}
+
+.info-con figure {
+    width: 500px;
+    height: 500px;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(5, 175, 242, 0.2);
+    /* box-shadow: inset 0 0 10px var(--primary), 0 0 20px var(--primary); */
+    border: 2px solid var(--primary-dark);
+}
+
+.info-con figure img {
+    width: 400px;
+    height: 400px;
+}
+
+/* .separator {
+    height: 500px;
+    width: 1px;
+    background-color: var(--primary);
+    margin: 0 20px;
+    box-shadow: 0 10px 10px var(--primary);
+} */
+
+.info-text {
+    padding: 40px;
+    width: 600px;
+    height: 100%;
+
+    background: rgba(5, 175, 242, 0.2);
+    box-shadow: inset 0 0 10px var(--primary), 0 0 20px var(--primary);
+    border: 2px solid var(--primary-dark);
+    /* filter: drop-shadow(0px 0px 3px var(--primary)); */
+
+    clip-path: polygon(
+        0% var(--notchSize),
+        var(--notchSize) 0%,
+        100% 0%,
+        100% calc(100% - var(--notchSize)),
+        calc(100% - var(--notchSize)) 100%,
+        0px 100%
+    );
+}
+
+.info-text li {
+    margin-top: 20px;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+}
+
+.info-text li:first-child {
+    margin-top: 0px;
+}
+
+.info-text-flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.info-Education p {
+    margin-top: 20px;
+}
+
+.info-Education p span {
+    margin-right: 10px;
+}
+
+.info-Education p strong {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.info-text li dl dt {
+    font-family: var(--about-info-font);
+    font-size: 36px;
+    /* width: 150px; */
+}
+
+.info-gap {
+    width: 100px;
+}
+
+.info-text li dl dd {
+    font-family: var(--kr-font);
+    font-size: 18px;
+}
+
+/* //e: information */
+
+/* //s: skill */
+
+.hexagon-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -28px;
+    z-index: 3;
+}
+
+/* 큰 정육각형 */
+.hexagon {
+    width: 100px;
+    height: 90px;
+    background-color: #05aff2;
+    border-radius: 20px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 작은 정육각형 */
+.inner-hexagon {
+    width: 80px;
+    height: 70px;
+    background-color: #000;
+    /* border-radius: 12px; */
+    clip-path: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 이미지 원 */
+.hexagon-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: no-repeat 50% / cover;
+}
+
+/* ai */
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+    width: 1132px;
+    height: 496px;
+}
+
+.skill-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 512px;
+}
+
+.column-left {
+}
+
+.column-right {
+}
+
+.skill-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    position: relative;
+}
+
+/* 텍스트 스타일 */
+.skill-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+
+    position: absolute;
+    top: -28px;
+    left: 70px;
+    z-index: 2;
+}
+
+/* 프로그래스 바 스타일 */
+.progress-container {
+    width: 440px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 4px 12px;
+    gap: 10px;
+
+    /* position: relative; */
+}
+
+.progress-bar {
+    display: flex;
+    height: 30px;
+    width: 14px;
+    background-color: var(--primary);
+
+    opacity: 0; /* 초기 상태 */
+    transform: scaleY(0);
+    transition: opacity 0.3s, transform 0.5s ease-in-out;
+}

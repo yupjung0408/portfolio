@@ -25,12 +25,12 @@
         <header>
             <div class="inner">
                 <nav>
-                    <h1 class="name">Kim Jungyup</h1>
+                    <h1 class="name"><a href="./index.html">Kim Jungyup</a></h1>
                     <ul class="gnb">
                         <li><a href="./index.html">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="./about.html">About</a></li>
                         <li><a href="./work.html">Work</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -39,7 +39,10 @@
         <main>
             <div class="inner">
                 <div class="work-list-wrap">
-                    <h1>WORK</h1>
+                    <div class="glitch-wrapper">
+                        <div class="glitch" data-text="WORK"><h1>WORK</h1></div>
+                    </div>
+
                     <ul class="work-list">
                         <li>
                             <a href="#card1">
@@ -71,10 +74,18 @@
                                 <strong>잔소리ON</strong>
                             </a>
                         </li>
+                        <li>
+                            <a href="#card6">
+                                <em>06.</em>
+                                <strong>Bienglo</strong>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- <div class="img-box"><img src="./images/img-box/imgbox1.png" alt="" /></div> -->
+                <div class="img-box">
+                    <a href="#card1"><img src="./images/img-box/imgbox1.png" alt="" /></a>
+                </div>
 
                 <!-- //s: work-card -->
 
@@ -178,6 +189,26 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="card-grid grid6">
+                        <div class="card card6" id="card6">
+                            <div class="image-container card-img6">
+                                <img src="./images/card6.png" alt="Bienglo" />
+                                <div class="overlay"></div>
+                                <div class="buttons">
+                                    <!-- <a href="#process">Process Page</a> -->
+                                    <a href="https://yupjung0408.github.io/bienglo/">Web Site</a>
+                                </div>
+                            </div>
+
+                            <div class="separator"></div>
+
+                            <div class="card-text">
+                                <h1>Bienglo</h1>
+                                <p>Clone Coding</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- //e: work-card -->
@@ -185,7 +216,7 @@
         </main>
         <!-- 스크롤 유도 표시 -->
         <div class="scroll-down">
-            <div class="btn-motion5">
+            <div class="btn-down">
                 <span></span>
             </div>
         </div>

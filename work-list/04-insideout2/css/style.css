@@ -1,0 +1,104 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px;
+    height: 120px;
+}
+
+.gnb {
+    display: flex;
+    gap: 60px;
+}
+
+.gnb li {
+    position: relative; /* 밑줄 위치 조정 위해 필요 */
+    padding: 10px;
+}
+
+.gnb li a:hover {
+    color: #000;
+}
+
+/* 호버 시 밑줄 효과 */
+.gnb li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px; /* 밑줄 두께 */
+    background-color: #fff; /* 밑줄 색상 */
+    opacity: 0; /* 처음엔 안 보이게 */
+    transform-origin: left;
+    transition: 0.4s;
+}
+
+.gnb li:hover::after {
+    opacity: 1; /* 호버 시 밑줄 나타남 */
+    width: 100%;
+}
+
+.inner {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.visual {
+    position: relative;
+}
+
+footer {
+    position: relative;
+}
+
+.btn-top {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.4s;
+}
+
+.btn-top:hover {
+    background: #fff;
+    color: #000;
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>about</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/about.css" />
+
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+        <script src="https://unpkg.com/lenis@1.2.0/dist/lenis.min.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/about.js"></script>
+    </head>
+    <body>
+        <!-- 마우스 효과 -->
+        <!--  REQUIRED / the cursor is made of two circles: small and big -->
+        <div class="cursor small"></div>
+        <div class="cursor big"></div>
+
+        <header>
+            <div class="inner">
+                <nav>
+                    <h1 class="name"><a href="./index.html">Kim Jungyup</a></h1>
+                    <ul class="gnb">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./work.html">Work</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="inner">
+                <div class="glitch-wrapper">
+                    <div class="glitch" data-text="About Me"><h1>About Me</h1></div>
+                </div>
+                <div class="tab">
+                    <!-- 탭메뉴 -->
+                    <ul class="tab-menu">
+                        <li><a href="#tab1">Information</a></li>
+                        <li><a href="#tab2">Skill</a></li>
+                        <li><a href="#tab3">탭메뉴3</a></li>
+                    </ul>
+
+                    <!-- 보여질 콘텐츠 전체 -->
+                    <div class="tab-contents">
+                        <div class="tab-item active" id="tab1">
+                            <h2>Information</h2>
+
+                            <div class="info-con">
+                                <div class="img-bd">
+                                    <figure><img src="./images/pic1.png" alt="" /></figure>
+                                </div>
+
+                                <!-- <div class="separator"></div> -->
+
+                                <ul class="info-text">
+                                    <li>
+                                        <dl class="info-text-flex">
+                                            <dt class="info-gap">Name</dt>
+                                            <dd>김정엽 (Kim Jungyup)</dd>
+                                        </dl>
+                                    </li>
+
+                                    <li>
+                                        <dl class="info-text-flex">
+                                            <dt class="info-gap">Birth</dt>
+                                            <dd>2000. 04. 08</dd>
+                                        </dl>
+                                    </li>
+
+                                    <li>
+                                        <dl class="info-text-flex">
+                                            <dt class="info-gap">E-Mail</dt>
+                                            <dd>kjy2782@naver.com</dd>
+                                        </dl>
+                                    </li>
+
+                                    <li>
+                                        <dl class="info-text-flex">
+                                            <dt>Certificate</dt>
+                                            <dd>GTQ 그래픽 기술 자격 1급</dd>
+                                        </dl>
+                                    </li>
+
+                                    <li>
+                                        <dl class="info-Education">
+                                            <dt>Education</dt>
+                                            <dd>
+                                                <p>
+                                                    <span>2024. 08. 19 - 10. 07</span>
+                                                    더조은컴퓨터아카데미 구로점
+                                                    <br />
+                                                    <strong>(시각 디자인) 일러스트&포토샵 기초 과정 수료</strong>
+                                                </p>
+
+                                                <p>
+                                                    <span>2024. 11. 20 - 2025. 04. 11</span>
+                                                    하이미디어아카데미 신촌점
+                                                    <br />
+                                                    <strong
+                                                        >(디지털 디자인) UX/UI 반응형 웹디자인 & 웹퍼블리셔 과정
+                                                        수료</strong
+                                                    >
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-item" id="tab2">
+                            <h2>Skill</h2>
+                            <div class="skill-container">
+                                <!-- 좌측 3개 묶음 -->
+                                <div class="skill-column column-left">
+                                    <div class="skill-group skill-1">
+                                        <div class="hexagon-wrapper">
+                                            <div class="hexagon">
+                                                <div class="inner-hexagon">
+                                                    <div class="hexagon-image">
+                                                        <img src="./images/skill-ico1.png" alt="Photoshop" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="skill-text">Photoshop</p>
+                                        <div class="progress-container">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-group">
+                                        <div class="hexagon-wrapper">
+                                            <div class="hexagon">
+                                                <div class="inner-hexagon">
+                                                    <div class="hexagon-image">
+                                                        <img src="./images/skill-ico2.png" alt="Illustrator" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="skill-text">Illustrator</p>
+                                        <div class="progress-container">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-group">
+                                        <div class="hexagon-wrapper">
+                                            <div class="hexagon">
+                                                <div class="inner-hexagon">
+                                                    <div class="hexagon-image">
+                                                        <img src="./images/skill-ico3.png" alt="Figma" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="skill-text">Figma</p>
+                                        <div class="progress-container">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 우측 4개 묶음 -->
+                                <div class="skill-column column-right">
+                                    <div class="skill-group">
+                                        <div class="hexagon-wrapper">
+                                            <div class="hexagon">
+                                                <div class="inner-hexagon">
+                                                    <div class="hexagon-image">
+                                                        <img src="./images/skill-ico4.png" alt="HTML" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="skill-text">HTML</p>
+                                        <div class="progress-container">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-group">
+                                        <div class="hexagon-wrapper">
+                                            <div class="hexagon">
+                                                <div class="inner-hexagon">
+                                                    <div class="hexagon-image">
+                                                        <img src="./images/skill-ico5.png" alt="CSS" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="skill-text">CSS</p>
+                                        <div class="progress-container">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-group">
+                                        <div class="hexagon-wrapper">
+                                            <div class="hexagon">
+                                                <div class="inner-hexagon">
+                                                    <div class="hexagon-image">
+                                                        <img src="./images/skill-ico6.png" alt="Javascript" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="skill-text">Javascript</p>
+                                        <div class="progress-container">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-group">
+                                        <div class="hexagon-wrapper">
+                                            <div class="hexagon">
+                                                <div class="inner-hexagon">
+                                                    <div class="hexagon-image">
+                                                        <img src="./images/skill-ico7.png" alt="jQuery" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="skill-text">jQuery</p>
+                                        <div class="progress-container">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-item" id="tab3">
+                            <h2>탭메뉴3</h2>
+                            <p>콘텐츠3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 배경 효과 -->
+        <div class="texture"></div>
+    </body>
+</html>

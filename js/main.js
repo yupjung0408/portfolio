@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach((section, index) => {
             if (index < progress / 2.22) {
                 section.style.backgroundColor = '#fff';
-                section.style.boxShadow = '0 0 5px #56f1ff, 0 0 25px #56f1ff, 0 0 50px #56f1ff, 0 0 200px #56f1ff';
+                // section.style.boxShadow = '0 0 5px #56f1ff, 0 0 25px #56f1ff, 0 0 50px #56f1ff, 0 0 200px #56f1ff';
+                section.style.boxShadow = 'inset 0 0 10px #56f1ff, 0 0 20px #56f1ff ';
             }
         });
 

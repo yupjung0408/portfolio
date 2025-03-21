@@ -111,7 +111,8 @@
 .enter-btn:hover {
     background: #56f1ff;
     color: #fff;
-    box-shadow: 0 0 5px #56f1ff, 0 0 25px #56f1ff, 0 0 50px #56f1ff, 0 0 200px #56f1ff;
+    /* box-shadow: 0 0 5px #56f1ff, 0 0 25px #56f1ff, 0 0 50px #56f1ff, 0 0 200px #56f1ff; */
+    box-shadow: inset 0 0 10px #56f1ff, 0 0 20px #56f1ff, 0 0 50px #56f1ff, 0 0 300px #56f1ff;
 }
 
 /* //e: enter-btn */
@@ -119,7 +120,8 @@
 @keyframes rotate {
     from {
         background-color: #fff;
-        box-shadow: 0 0 5px #56f1ff, 0 0 25px #56f1ff, 0 0 50px #56f1ff, 0 0 200px #56f1ff;
+        /* box-shadow: 0 0 5px #56f1ff, 0 0 25px #56f1ff, 0 0 50px #56f1ff, 0 0 200px #56f1ff; */
+        box-shadow: inset 0 0 10px #56f1ff, 0 0 20px #56f1ff;
     }
     to {
         background-color: rgba(255, 255, 255, 0.075);
