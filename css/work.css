@@ -21,6 +21,7 @@ body {
 }
 
 main .inner {
+    width: 100%;
     padding: 125px 0 0;
 }
 .work-list-wrap {
