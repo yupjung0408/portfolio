@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
+
     // contact-card 슬라이드 다운 효과
     const contactCard = document.querySelector('.contact-card');
     setTimeout(() => {

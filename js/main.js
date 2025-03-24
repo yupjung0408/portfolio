@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
+
     // 로딩효과
 
     const loader = document.querySelector('.loader');

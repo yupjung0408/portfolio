@@ -18,12 +18,14 @@ body {
     background: #000;
     color: #fff;
     font-family: var(--title-font);
+    overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
 main .inner {
     width: 100%;
     padding: 125px 0 0;
 }
+
 .work-list-wrap {
     padding: 20px 360px;
 }
@@ -41,12 +43,13 @@ main .inner {
     height: 100%;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     /* text-align: center; */
 }
 
 .glitch {
     position: relative;
+    /* font-size: 80px; */
     font-size: 80px;
     font-weight: bold;
     color: #ffffff;

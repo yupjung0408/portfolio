@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
+
     const glitchElement = document.querySelector('.glitch');
 
     function startGlitchEffect() {
