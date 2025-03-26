@@ -4,6 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>about</title>
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="About Me - Kim Jungyup" />
+        <meta property="og:description" content="Information about Kim Jungyup - Web Designer & Developer" />
+        <meta property="og:image" content="./images/about-pic1.png" />
+        <meta property="og:url" content="https://yupjung0408.github.io/portfolio/about.html" />
+        <meta property="og:type" content="website" />
+
         <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
@@ -14,6 +21,7 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
         <script src="https://unpkg.com/lenis@1.2.0/dist/lenis.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
         <script src="./js/script.js"></script>
         <script src="./js/about.js"></script>
         <script src="./js/loading.js"></script>
@@ -243,7 +251,9 @@
 
                         <div class="tab-item" id="tab3">
                             <h3>Personality</h3>
-                            <p>콘텐츠3</p>
+                            <div class="personality-container">
+                                <div id="matter-container"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
