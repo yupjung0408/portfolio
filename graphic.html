@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Graphic</title>
+        <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css" />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/graphic.css" />
+
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/lenis@1.2.0/dist/lenis.min.js"></script>
+        <script type="module" src="./js/gallery.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/loading.js"></script>
+        <script src="./js/graphic.js"></script>
+    </head>
+    <body>
+        <!-- 마우스 효과 -->
+        <!--  REQUIRED / the cursor is made of two circles: small and big -->
+        <div class="cursor small"></div>
+        <div class="cursor big"></div>
+
+        <header>
+            <div class="inner">
+                <nav>
+                    <h1 class="name"><a href="./index.html">Kim Jungyup</a></h1>
+                    <ul class="gnb">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./work.html">Work</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="inner">
+                <div class="glitch-wrapper">
+                    <div class="glitch" data-text="Graphic Design"><h2>Graphic Design</h2></div>
+                </div>
+
+                <!-- Slider main container -->
+                <div class="grid">
+                    <div class="graphic-slider-wrap">
+                        <div class="swiper graphic-slider">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide graphic-card">
+                                    <div class="image-container graphic1">
+                                        <img src="./images/graphic1.png" alt="Graphic" />
+                                        <div class="overlay"></div>
+                                        <div class="buttons">
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="card-text">
+                                        <h3>HARIBO</h3>
+                                        <p>Event Poster</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide graphic-card">
+                                    <div class="image-container graphic2">
+                                        <img src="./images/graphic2.png" alt="Graphic" />
+                                        <div class="overlay"></div>
+                                        <div class="buttons">
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="card-text">
+                                        <h3>FC SEOUL</h3>
+                                        <p>Brochures</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide graphic-card">
+                                    <div class="image-container graphic3">
+                                        <img src="./images/graphic3.png" alt="Graphic" />
+                                        <div class="overlay"></div>
+                                        <div class="buttons">
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="card-text">
+                                        <h3>홈 포장마차</h3>
+                                        <p>Event Poster</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide graphic-card">
+                                    <div class="image-container graphic4">
+                                        <img src="./images/graphic4.png" alt="Graphic" />
+                                        <div class="overlay"></div>
+                                        <div class="buttons">
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="card-text">
+                                        <h3>출석체크</h3>
+                                        <p>Event Poster</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide graphic-card">
+                                    <div class="image-container graphic5">
+                                        <img src="./images/graphic5.png" alt="Graphic" />
+                                        <div class="overlay"></div>
+                                        <div class="buttons">
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="card-text">
+                                        <h3>도전룰렛</h3>
+                                        <p>Event Poster</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide graphic-card">
+                                    <div class="image-container graphic6">
+                                        <img src="./images/graphic6.png" alt="Graphic" />
+                                        <div class="overlay"></div>
+                                        <div class="buttons">
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="card-text">
+                                        <h3>CHRISTMAS</h3>
+                                        <p>Event Poster</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide graphic-card">
+                                    <div class="image-container graphic7">
+                                        <img src="./images/graphic7.png" alt="Graphic" />
+                                        <div class="overlay"></div>
+                                        <div class="buttons">
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="card-text">
+                                        <h3>Yes24</h3>
+                                        <p>Event Poster</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide graphic-card">
+                                    <div class="image-container graphic8">
+                                        <img src="./images/graphic8.png" alt="Graphic" />
+                                        <div class="overlay"></div>
+                                        <div class="buttons">
+                                            <a href="#">View More</a>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="card-text">
+                                        <h3>BC Card</h3>
+                                        <p>Event Poster</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Modal -->
+            <div class="gallery-modal" id="gallery-modal">
+                <div class="gallery-content">
+                    <!-- HARIBO Gallery -->
+                    <div class="pswp-gallery" id="haribo-gallery">
+                        <a href="./images/graphic1.png" data-pswp-width="758" data-pswp-height="1263">
+                            <img src="./images/graphic1.png" alt="HARIBO" />
+                        </a>
+                        <a href="./images/graphic1-2.png" data-pswp-width="700" data-pswp-height="700">
+                            <img src="./images/graphic1-2.png" alt="HARIBO" />
+                        </a>
+                        <a href="./images/graphic1-3.png" data-pswp-width="1263" data-pswp-height="758">
+                            <img src="./images/graphic1-3.png" alt="HARIBO" />
+                        </a>
+                    </div>
+
+                    <!-- FC SEOUL Gallery -->
+                    <div class="pswp-gallery" id="fcseoul-gallery">
+                        <a href="./images/graphic2.png" data-pswp-width="2000" data-pswp-height="1500">
+                            <img src="./images/graphic2.png" alt="FC SEOUL" />
+                        </a>
+                        <a href="./images/graphic2-2.png" data-pswp-width="853" data-pswp-height="596">
+                            <img src="./images/graphic2-2.png" alt="FC SEOUL" />
+                        </a>
+                    </div>
+
+                    <!-- 홈 포장마차 Gallery -->
+                    <div class="pswp-gallery" id="homefood-gallery">
+                        <a href="./images/graphic3.png" data-pswp-width="1140" data-pswp-height="1887">
+                            <img src="./images/graphic3.png" alt="홈 포장마차" />
+                        </a>
+                        <a href="./images/graphic3-2.png" data-pswp-width="1000" data-pswp-height="1000">
+                            <img src="./images/graphic3-2.png" alt="홈 포장마차" />
+                        </a>
+                        <a href="./images/graphic3-3.png" data-pswp-width="1887" data-pswp-height="1140">
+                            <img src="./images/graphic3-3.png" alt="홈 포장마차" />
+                        </a>
+                    </div>
+
+                    <!-- 출석체크 Gallery -->
+                    <div class="pswp-gallery" id="attendance-gallery">
+                        <a href="./images/graphic4.png" data-pswp-width="864" data-pswp-height="1354">
+                            <img src="./images/graphic4.png" alt="출석체크" />
+                        </a>
+                    </div>
+
+                    <!-- 도전룰렛 Gallery -->
+                    <div class="pswp-gallery" id="roulette-gallery">
+                        <a href="./images/graphic5.png" data-pswp-width="658" data-pswp-height="969">
+                            <img src="./images/graphic5.png" alt="도전룰렛" />
+                        </a>
+                    </div>
+
+                    <!-- CHRISTMAS Gallery -->
+                    <div class="pswp-gallery" id="christmas-gallery">
+                        <a href="./images/graphic6.png" data-pswp-width="736" data-pswp-height="1041">
+                            <img src="./images/graphic6.png" alt="CHRISTMAS" />
+                        </a>
+                    </div>
+
+                    <!-- Yes24 Gallery -->
+                    <div class="pswp-gallery" id="yes24-gallery">
+                        <a href="./images/graphic7.png" data-pswp-width="1024" data-pswp-height="1024">
+                            <img src="./images/graphic7.png" alt="Yes24" />
+                        </a>
+                        <a href="./images/graphic7-2.png" data-pswp-width="1024" data-pswp-height="600">
+                            <img src="./images/graphic7-2.png" alt="Yes24" />
+                        </a>
+                    </div>
+
+                    <!-- BC Card Gallery -->
+                    <div class="pswp-gallery" id="bccard-gallery">
+                        <a href="./images/graphic8.png" data-pswp-width="564" data-pswp-height="1000">
+                            <img src="./images/graphic8.png" alt="BC Card" />
+                        </a>
+                    </div>
+
+                    <button class="close-gallery">Close</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- 배경 효과 -->
+        <div class="texture"></div>
+    </body>
+</html>

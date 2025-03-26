@@ -187,7 +187,7 @@ nav {
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: height 0.2s, width 0.2s;
-    z-index: 99;
+    z-index: 9999;
 }
 
 /* REQUIRED / besides position, pointer-events, transform, and transition, the rest are customizable styling */
@@ -202,7 +202,7 @@ nav {
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: height 0.5s, width 0.5s, filter 0.5s;
-    z-index: 99;
+    z-index: 9999;
 }
 
 /* REQUIRED / some styling is necessary for hover effect */

@@ -1,5 +1,4 @@
 @charset 'utf-8';
-/* work.css */
 
 :root {
     --main-bg: #363159;
@@ -26,10 +25,6 @@ main .inner {
     padding: 125px 0 0;
 }
 
-.work-list-wrap {
-    padding: 20px 360px;
-}
-
 /* 글리치 효과 */
 
 .glitch-wrapper {
@@ -38,13 +33,12 @@ main .inner {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* text-align: center; */
+    text-align: center;
 }
 
 .glitch {
     position: relative;
-    /* font-size: 80px; */
-    font-size: 80px;
+    font-size: 60px;
     font-weight: bold;
     color: #ffffff;
     letter-spacing: 3px;
@@ -96,162 +90,64 @@ main .inner {
 
 /* //e: 글리치 효과 */
 
-.work-list {
-    width: 100%;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-
-.work-list li {
+.graphic-slider-wrap {
+    margin: 40px auto 80px;
     width: 1200px;
-    height: 85px;
-    border: 3px solid #383838;
-    transition: all ease-out 0.5s;
+    background: rgba(5, 175, 242, 0.2);
+    border: 2px solid var(--primary-dark);
+    box-shadow: inset 0 0 10px var(--primary), 0 0 20px var(--primary);
 }
 
-.work-list li:hover {
-    border: 3px solid #fff;
-    transform: translateY(-5px);
-    height: 120px;
-    width: 1400px;
+.graphic-slider {
+    padding: 20px 0 0;
+    width: 1000px;
+    height: 700px;
+    /* border: 1px solid #fff; */
 }
 
-.work-list li:hover * {
+.swiper-wrapper {
+}
+
+.swiper-pagination {
+    color: #fff;
+    font-size: 18px;
+    font-family: var(--number-font);
+    margin-bottom: 10px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    /* border: 2px solid #fff; */
+    border: 2px solid var(--primary-dark);
+    box-shadow: inset 0 0 5px var(--primary), 0 0 10px var(--primary);
+    animation: text-glow 1s ease-in-out infinite alternate;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-button-prev {
+    /* color: var(--primary); */
     color: #fff;
 }
 
-.work-list li a {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+.swiper-button-next {
+    /* color: var(--primary); */
+    color: #fff;
+}
+
+.graphic-card {
     width: 100%;
-    height: 100%;
-}
-
-.work-list li em {
-    font-size: 36px;
-}
-
-.work-list li strong {
-    font-size: 32px;
-}
-
-/* //e: work-list */
-
-/* img-box */
-.img-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    pointer-events: none;
-    user-select: none;
-
-    width: 360px;
-    height: 400px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 60px 50px -7px;
-    border: 3px solid #fff;
-}
-
-.img-box a {
-    width: 100%;
-    height: 100%;
-}
-
-.img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* 스크롤 유도 애니메이션 */
-.scroll-down {
-    position: fixed;
-    bottom: 105px;
-    right: 105px;
-    /* right: 160px; */
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
-}
-
-.btn-down {
-    position: relative;
-    width: 60px;
-    height: 60px;
-}
-
-.btn-down span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    margin-left: -12px;
-    border-left: 3px solid #fff;
-    border-bottom: 3px solid #fff;
-    transform: rotate(-45deg);
-    animation: btn-down 1.5s infinite;
-    box-sizing: border-box;
-}
-
-@keyframes btn-down {
-    0% {
-        transform: rotate(-45deg) translate(0, 0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: rotate(-45deg) translate(-20px, 20px);
-        opacity: 0;
-    }
-}
-
-/* //s: card */
-
-.card-wrap {
-    width: 100%;
-    /* padding: 15vh; */
-    padding: 30vh 15vh 125px;
-
-    /* 마지막 카드 늦게 사라지게 */
-    /* padding-bottom: 30vh; */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 200px;
-}
-
-.card {
-    position: sticky;
-    top: 135px;
-    width: 1200px;
-    height: 700px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
     text-align: center;
-
     background: rgba(5, 175, 242, 0.2);
-    box-shadow: inset 0 0 10px var(--primary), 0 0 20px var(--primary);
+    /* box-shadow: inset 0 0 10px var(--primary), 0 0 20px var(--primary); */
     border: 2px solid var(--primary-dark);
-
-    scroll-margin-top: 150px; /* 스크롤 위치 여유 공간 */
 }
 
 .separator {
@@ -265,13 +161,13 @@ main .inner {
 .card-text h3 {
     font-weight: 700;
     animation: text-glow 1s ease-in-out infinite alternate;
-    font-size: 40px;
+    font-size: 32px;
 }
 
 .card-text p {
     margin-top: 20px;
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
-    font-size: 24px;
+    font-size: 18px;
 }
 
 @keyframes text-glow {
@@ -283,7 +179,9 @@ main .inner {
     }
 }
 
-.card-grid {
+.grid {
+    margin: 0 auto;
+    width: 1200px;
     background: repeating-linear-gradient(
             -45deg,
             rgba(5, 175, 242, 0.1),
@@ -296,7 +194,7 @@ main .inner {
 
 .image-container {
     position: relative;
-    width: 800px;
+    width: 600px;
     height: 400px;
 }
 
@@ -308,8 +206,13 @@ main .inner {
     transition: 0.4s ease;
 }
 
-.card-img3 img,
-.card-img2 img {
+.graphic1 img,
+.graphic3 img,
+.graphic4 img,
+.graphic5 img,
+.graphic6 img,
+.graphic7 img,
+.graphic8 img {
     object-fit: contain;
 }
 
@@ -324,26 +227,6 @@ main .inner {
     opacity: 0;
     transition: 0.4s ease;
 }
-
-/* .buttons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    gap: 1rem;
-    opacity: 0;
-    transition: 0.4s ease;
-}
-
-.buttons a {
-    padding: 10px 20px;
-    background: #ff4d4d;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-} */
 
 .buttons {
     position: absolute;
@@ -391,31 +274,112 @@ main .inner {
     opacity: 1;
 }
 
-/* top 버튼 */
-
-.btn-top {
+/* Gallery Modal Styles */
+.gallery-modal {
+    display: none;
     position: fixed;
-    right: 80px;
-    bottom: 88px;
-    width: 60px;
-    height: 60px;
-    border: 3px solid #383838;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center; /* 중앙 정렬로 변경 */
+    overflow: hidden; /* 스크롤 제거 */
+}
+
+.gallery-modal.active {
+    display: flex;
+}
+
+.gallery-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    background: var(--secondary-bg);
+    padding: 60px 20px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 20px var(--primary);
+    margin: auto;
+    max-height: 90vh; /* 최대 높이 설정 */
+    overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
+}
+
+.close-gallery {
+    position: fixed; /* fixed로 변경하여 항상 보이게 */
+    top: 60px; /* 위치 조정 */
+    right: calc(5% + 20px); /* 위치 조정 */
+    background: var(--primary);
     color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    z-index: 1001;
+}
 
-    font-weight: 500;
-    font-size: 16px;
+.close-gallery:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 0 10px var(--primary);
+}
 
+.pswp-gallery {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.pswp-gallery.active {
+    display: grid;
+}
+
+/* 단일 이미지일 때의 스타일 */
+.pswp-gallery:only-child {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    z-index: 8;
-    transition: 0.4s;
+    height: auto;
+    max-height: calc(90vh - 100px); /* 모달 패딩 고려 */
 }
 
-.btn-top:hover {
-    border-color: #fff;
-    width: 100px;
-    height: 100px;
-    font-size: 20px;
+.pswp-gallery a {
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* 단일 이미지일 때의 스타일 */
+.pswp-gallery a:only-child {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(90vh - 120px); /* 모달 패딩과 여유 공간 고려 */
+}
+
+.pswp-gallery a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.pswp-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* 단일 이미지일 때의 스타일 */
+.pswp-gallery a:only-child img {
+    width: auto;
+    height: auto;
+    max-height: calc(90vh - 120px);
+    margin: 0 auto;
 }

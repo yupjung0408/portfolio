@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactCard = document.querySelector('.contact-card');
     setTimeout(() => {
         contactCard.classList.add('slide-down');
-    }, 300); // 페이지 로드 후 약간의 지연 시간을 줌
+    }, 500); // 페이지 로드 후 약간의 지연 시간을 줌
 
     // text
     (function () {
