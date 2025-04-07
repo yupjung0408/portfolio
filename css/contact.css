@@ -83,6 +83,7 @@ main .inner {
 }
 
 .contact-card {
+    margin: 0 auto;
     padding: 40px;
     width: 1200px;
     height: 700px;
@@ -201,4 +202,11 @@ main .inner {
 
 .copy-btn:hover {
     background: #05aff2;
+}
+
+/* 화면 너비가 2400px 이상일 때 적용 */
+@media screen and (max-width: 2400px) {
+    main .inner {
+        padding-top: 20vh;
+    }
 }

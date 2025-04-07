@@ -694,3 +694,17 @@ main .inner {
 }
 
 /* //e: 배경 효과 */
+
+/* 화면 너비가 2400px 이상일 때 적용 */
+@media screen and (max-width: 2400px) {
+    main .inner {
+        padding: 15vh 30% 0;
+    }
+}
+
+/* 화면 너비가 1920px 이상일 때 적용 */
+@media screen and (max-width: 1920px) {
+    main .inner {
+        padding: 125px 487px 0;
+    }
+}

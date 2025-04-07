@@ -223,7 +223,7 @@ main .inner {
 .card-wrap {
     width: 100%;
     /* padding: 15vh; */
-    padding: 30vh 15vh 125px;
+    padding: 30vh 15vh 15vh; /* 하단패딩 125px */
 
     /* 마지막 카드 늦게 사라지게 */
     /* padding-bottom: 30vh; */

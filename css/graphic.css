@@ -383,3 +383,17 @@ main .inner {
     max-height: calc(90vh - 120px);
     margin: 0 auto;
 }
+
+/* 화면 너비가 2400px 이상일 때 적용 */
+@media screen and (max-width: 2400px) {
+    .graphic-slider-wrap {
+        margin: 80px auto 80px;
+    }
+}
+
+/* 화면 너비가 1920px 이상일 때 적용 */
+@media screen and (max-width: 1920px) {
+    .graphic-slider-wrap {
+        margin: 40px auto 80px;
+    }
+}
