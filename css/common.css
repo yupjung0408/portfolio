@@ -7,7 +7,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
-/* OPTIONAL / defining page color variables */
 :root {
     --black: #000000;
     --grey1: #a3a3a3;
@@ -37,12 +36,12 @@ body {
     color: #fff;
 }
 
-/* REQUIRED / without this, the cursor will still show */
+/* 기존의 커서 보이지 않게 가리기 */
 * {
     cursor: none;
 }
 
-/* OPTIONAL / prevents user from selecting texts */
+/* 사용자가 텍스트를 선택하지 못하도록 함 */
 ::selection {
     user-select: none;
 }
@@ -175,7 +174,7 @@ nav {
 
 /* 마우스 효과 */
 
-/* REQUIRED / besides position, pointer-events, transform, and transition, the rest are customizable styling */
+/* 필수 / 위치, 포인터 이벤트, 변환 및 전환 외에 나머지는 사용자 정의 가능한 스타일링입니다. */
 .small {
     height: 10px;
     width: 10px;
@@ -190,7 +189,7 @@ nav {
     z-index: 9999;
 }
 
-/* REQUIRED / besides position, pointer-events, transform, and transition, the rest are customizable styling */
+/* 필수 / 위치, 포인터 이벤트, 변환 및 전환 외에 나머지는 사용자 정의 가능한 스타일링입니다. */
 .big {
     height: 50px;
     width: 50px;
@@ -205,7 +204,7 @@ nav {
     z-index: 9999;
 }
 
-/* REQUIRED / some styling is necessary for hover effect */
+/* 마우스 커서 호버 효과 큰 원 */
 .hover__big {
     height: 100px;
     width: 100px;
@@ -214,7 +213,7 @@ nav {
     transition: height 0.5s, width 0.5s, filter 0.5s;
 }
 
-/* REQUIRED / some styling is necessary for hover effect */
+/* 마우스 커서 호버 효과 작은 원 */
 .hover__small {
     height: 8px;
     width: 8px;

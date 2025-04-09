@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
 
-    // declares variables for big circle and small circle in cursor
+    // 커서에서 큰 원과 작은 원에 대한 변수선언
     const cursorBig = document.querySelector('.big');
     const cursorSmall = document.querySelector('.small');
     const a = document.querySelectorAll('a');
 
-    // positions the two circles in a desired placement
+    // 두 개의 원을 원하는 위치에 배치
     document.addEventListener('mousemove', function (e) {
         const x = e.clientX;
         const y = e.clientY;
@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorSmall.style.transform = `translate3d(calc(${x}px - 50%), calc(${y}px - 50%), 0)`;
     });
 
-    // adds class when cursor clicks
+    // 커서를 클릭하면 클래스가 추가됨
     document.addEventListener('mousedown', function () {
         cursorBig.classList.add('click');
         cursorSmall.classList.add('hover__small');
     });
 
-    // removes class when cursor stops clicking
+    // 커서가 클릭을 멈추면 클래스를 제거함
     // document.addEventListener('mouseup', function () {
     //     cursorBig.classList.remove('click');
     //     cursorSmall.classList.remove('hover__small');
@@ -36,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorSmall.classList.remove('hover__small');
     });
 
-    // adds and removes class when mouse hovers and stops hovering
+    // 마우스가 호버링되고 호버링이 중단되면 클래스를 추가하고 제거함
+    // a 태그에 마우스 호버시 클래스 추가
     a.forEach((item) => {
         item.addEventListener('mouseover', () => {
             cursorBig.classList.add('hover__big');

@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 textCharacters,
                 textLength,
                 wrap;
-            // Default properties.
+            // 기본값 설정
             defaults = {
                 probability: 0.2,
                 glitches: '-|/\\',
@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'easeInOutQuad',
                 delay: 0.0,
             };
-            // Convert the element to a jQuery object and build the settings object.
+            // jQuery 객체로 변환
             $element = $(element);
             settings = $.extend(defaults, options);
-            // Convenience methods.
+            // 랜덤으로 글자 순서 섞기
             shuffle = function () {
                 if (Math.random() < 0.5) {
                     return 1;
