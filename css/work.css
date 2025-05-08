@@ -309,7 +309,8 @@ main .inner {
 }
 
 .card-img3 img,
-.card-img2 img {
+.card-img2 img,
+.card-img7 img {
     object-fit: contain;
 }
 
